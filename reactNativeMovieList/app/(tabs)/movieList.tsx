@@ -17,7 +17,7 @@ const movieList = () => {
   const loading = useSelector((state: RootState) => state.movies.loading);
 
   useEffect(() => {
-    const getMovies = async () => {
+    (async () => {
       dispatch(setLoading(true));
       try {
         const moviesData = await fetchMovies();
@@ -27,8 +27,7 @@ const movieList = () => {
       } finally {
         dispatch(setLoading(false));
       }
-    };
-    getMovies();
+    })();
   }, [dispatch]);
 
   return (

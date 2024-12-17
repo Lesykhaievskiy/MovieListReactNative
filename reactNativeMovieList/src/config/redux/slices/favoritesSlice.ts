@@ -1,6 +1,4 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { setLoading } from './moviesSlice';
-import { act } from 'react';
 
 interface FavoriteMovie {
   id: number;

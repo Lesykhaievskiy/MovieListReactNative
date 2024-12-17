@@ -1,9 +1,11 @@
-import { createReducer, createSlice } from '@reduxjs/toolkit';
+import { createSlice } from '@reduxjs/toolkit';
 
 export interface Movie {
   id: number;
   title: string;
   poster_path: string;
+  overview: string;
+  backdrop_path: string;
 }
 
 interface MovieState {
